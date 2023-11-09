@@ -40,7 +40,7 @@ __Why I chose Server Side over Client Side__
 4. Being a backend developer, I don't mind covering the hard yards just to make client's life a little easier. Cheers ;) !
 
 __Reason for choosing Postgres__
-1. ACID compiant out of the box.
+1. ACID compliant out of the box.
 2. Supports inheritance and complex relationship between tables.
 3. Supports a wide range of data types like JSONs, Hash Tables etc.
 
