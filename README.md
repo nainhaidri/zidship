@@ -59,6 +59,10 @@ I have created mapping of delivery statuses in Enums/FedexStatusCodes, but since
 6. php artisan migrate
 7. Project is now running at http://localhost:8086
 
-
+## Technologies
+Laravel 10
+PHP 8.2
+Postgres 16
+Apache
 
 
