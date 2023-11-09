@@ -56,7 +56,7 @@ I have created mapping of delivery statuses in Enums/FedexStatusCodes, but since
 3. docker-compose exec zid-php /bin/bash
 4. cp .env.example .env
 5. composer install
-6. php aritsan migrate
+6. php artisan migrate
 7. Project is now running at http://localhost:8086
 
 
