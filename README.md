@@ -23,7 +23,7 @@ Lets talk about __client side__ first. The __advantages__ that come along with c
 
 __Disadvangtages:__
 1. For every new courier, consumers of this service will have to add integration for them as well, which increases the overall complexity of project.
-2. If third party authentication is managed at client side, then all third party secrets will be stored at client side, which means if client side storage is hacked, he can have crentials to all of our courier platforms
+2. If third party authentication is managed at client side, then all third party secrets will be stored at client side, which means if client side storage is hacked, he can have credentials to all of our courier platforms
 
 Now lets move on to __server side disadvantages__ first:
 1. On server side, all the third party __authentication__ tokens are to be managed which may or may not be required by the clients/consumers.
@@ -35,7 +35,7 @@ __Advantages of Server Side Auth__
 
 __Why I chose Server Side over Client Side__
 1. Even with the risk of centralization of tokens, it is better to save tokens at server side to avoid multiple different authentication calls to third party APIs. The returned token from the mentioned Auth requests can be encrypted before storing to the database which means even if the database is compromised, they will have encrypted tokens instead of plain access tokens.
-2. __High throughput. Low latency__ . If I already have a valid token for a courier, I can directly fetch it from my database instead of authenticating with client
+2. __High throughput. Low latency__ . If I already have a valid token for a courier, I can directly fetch it from my database instead of authenticating with the third party courier.
 3. __High performace__ Servers are mostly isolated tier of any application whose sole purpose is to process the request and give proper response to the client whereas the client can have different applications running on their systems impacting the application's performance.
 4. Being a backend developer, I don't mind covering the hard yards just to make client's life a little easier. Cheers ;) !
 
@@ -52,7 +52,7 @@ I have created mapping of delivery statuses in Enums/FedexStatusCodes, but since
 
 ## Usage
 1. Install Docker
-2. Run docker-compose up --build -d
+2. docker-compose up --build -d
 3. docker-compose exec zid-php /bin/bash
 4. cp .env.example .env
 5. composer install
