@@ -61,8 +61,11 @@ I have created mapping of delivery statuses in Enums/FedexStatusCodes, but since
 
 ## Technologies
 Laravel 10
+
 PHP 8.2
+
 Postgres 16
+
 Apache
 
 
