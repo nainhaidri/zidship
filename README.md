@@ -39,10 +39,25 @@ __Why I chose Server Side over Client Side__
 3. __High performace__ Servers are mostly isolated tier of any application whose sole purpose is to process the request and give proper response to the client whereas the client can have different applications running on their systems impacting the application's performance.
 4. Being a backend developer, I don't mind covering the hard yards just to make client's life a little easier. Cheers ;) !
 
+__Reason for choosing Postgres__
+1. ACID compiant out of the box.
+2. Supports inheritance and complex relationship between tables.
+3. Supports a wide range of data types like JSONs, Hash Tables etc.
+
 ### Tracking (Not Done)
 I was not able to generate Fedex tracking response from Fedex since I do not have any active shipping account. I tried to reach support a few times but they have not answered yet. The request is integrated with body and parameters but my credentials do not have access to their Tracking APIs.
 
 ### Mapping of relevant status (Not Done)
 I have created mapping of delivery statuses in Enums/FedexStatusCodes, but since tracking is not working, I could not map their statuses with my ENUMs. The definition is there in Enums as well as configuration but mapping could not be done due to Tracking APIs access.
+
+## Usage
+1. Install Docker
+2. Run docker-compose up --build -d
+3. docker-compose exec zid-php /bin/bash
+4. cp .env.example .env
+5. composer install
+6. Project is now running at http://localhost:8086
+
+
 
 
