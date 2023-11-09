@@ -57,7 +57,8 @@ I have created mapping of delivery statuses in Enums/FedexStatusCodes, but since
 4. cp .env.example .env
 5. composer install
 6. php artisan migrate
-7. Project is now running at http://localhost:8086
+7. php artisan db:seed
+8. Project is now running at http://localhost:8086
 
 ## Technologies
 Laravel 10
