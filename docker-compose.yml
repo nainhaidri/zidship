@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  zid-database:
+    image: postgres
+    container_name: zid-database
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: zid
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+        - '5436:5432'
+  zid-php:
+    container_name: zid-php
+    build:
+      context: ./php
+    ports:
+        - '8086:80'
+    volumes:
+      - ./src:/var/www/zid
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    depends_on:
+      - zid-database
